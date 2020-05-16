@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SinActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="5dp"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-2337287186342241/8146331255"
+        ads:layout_constraintBottom_toBottomOf="parent"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintStart_toStartOf="parent"
+        ads:layout_constraintTop_toTopOf="@+id/textView"
+        ads:layout_constraintVertical_bias="0.983"></com.google.android.gms.ads.AdView>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="76dp"
+        android:text="Calculate your trigonometric function."
+        android:textSize="26dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="0dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginBottom="67dp"
+        android:text="Choose your angle unit:"
+        android:textSize="26dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttoncalcSine"
+        android:layout_width="0dp"
+        android:layout_height="72dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginRight="42dp"
+        android:background="@drawable/button"
+        android:text="Calculate sine"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttoncalcCosine"
+        app:layout_constraintStart_toStartOf="parent"
+        style="@style/AppTheme2"
+        app:layout_constraintTop_toTopOf="parent" />
+    app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/buttoncalcCosine"
+        android:layout_width="0dp"
+        android:layout_height="72dp"
+        android:background="@drawable/button"
+        android:text="Calculate cosine"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttoncalcSine"
+        style="@style/AppTheme2"
+        app:layout_constraintTop_toTopOf="parent" />
+    app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/buttoncalcTan"
+        android:layout_width="0dp"
+        android:layout_height="72dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginRight="42dp"
+        android:background="@drawable/button"
+        android:text="Calculate tangent"
+        app:layout_constraintBottom_toBottomOf="@+id/buttoncalcCotan"
+        app:layout_constraintEnd_toStartOf="@+id/buttoncalcCotan"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttoncalcSine"
+        style="@style/AppTheme2"
+        app:layout_constraintVertical_bias="1.0" />
+    app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/buttonrate"
+        style="@style/AppTheme2"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/buttonrate"
+        android:text="Rate me!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/buttoncalcCotan"
+        android:layout_width="0dp"
+        android:layout_height="72dp"
+        android:layout_marginBottom="65dp"
+        android:background="@drawable/button"
+        android:text="Calculate cotangent"
+        app:layout_constraintBottom_toTopOf="@+id/Result"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttoncalcTan"
+        style="@style/AppTheme2"
+        app:layout_constraintTop_toBottomOf="@+id/buttoncalcCosine" />
+    app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/buttoncalcSine"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="0dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginBottom="46dp"
+        android:text="Enter value = "
+        android:textSize="26dp"
+        app:layout_constraintBottom_toBottomOf="@+id/editText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/Result"
+        android:layout_width="0dp"
+        android:layout_height="77dp"
+        android:layout_marginBottom="16dp"
+        android:text=""
+        android:textSize="26dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkdegree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:text="degree"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <CheckBox
+        android:id="@+id/checkrad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:text="rad"
+        app:layout_constraintEnd_toEndOf="@+id/editText"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <CheckBox
+        android:id="@+id/checkgrad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="56dp"
+        android:layout_marginRight="56dp"
+        android:text="grad"
+        app:layout_constraintEnd_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+
+</android.support.constraint.ConstraintLayout>

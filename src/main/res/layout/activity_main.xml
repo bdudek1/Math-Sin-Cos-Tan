@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="20dp"
+        android:text="Welcome to Math Sin Calculator!"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonarc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonsin"
+        style="@style/AppTheme2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginRight="42dp"
+        android:layout_marginBottom="20dp"
+        android:layout_toLeftOf="@+id/buttonarc"
+        android:background="@drawable/button"
+        android:text="Calculate sin, cos, tg or ctg function"
+        app:layout_constraintBottom_toTopOf="@+id/buttonlaw"
+        app:layout_constraintEnd_toStartOf="@+id/buttonarc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/buttonarc"
+        style="@style/AppTheme2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/button"
+        android:text="Calculate arc functions"
+        app:layout_constraintBottom_toTopOf="@+id/buttonlaw"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonsin"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/buttonhiperbolic"
+        style="@style/AppTheme2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="42dp"
+        android:layout_marginRight="42dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/button"
+        android:text="Calculate hyperbolic functions"
+        app:layout_constraintBottom_toTopOf="@+id/buttonEquations"
+        app:layout_constraintEnd_toStartOf="@+id/buttonhiperboliclaw"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonlaw" />
+
+    <Button
+        android:id="@+id/buttonhiperboliclaw"
+        style="@style/AppTheme2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/button"
+        android:text="Learn about hyperbolic functions laws"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonhiperbolic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonhiperbolic"
+        app:layout_constraintTop_toTopOf="@+id/buttonhiperbolic" />
+
+    <Button
+        android:id="@+id/buttonlaw"
+        style="@style/AppTheme2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/buttonsin"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/button"
+        android:text="Learn about laws of trigonometrics"
+        app:layout_constraintBottom_toTopOf="@+id/buttonhiperbolic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonarc" />
+
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="5dp"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-2337287186342241/8146331255"
+        ads:layout_constraintBottom_toBottomOf="parent"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintStart_toStartOf="parent"
+        ads:layout_constraintTop_toTopOf="@+id/textView"
+        ads:layout_constraintVertical_bias="0.983"></com.google.android.gms.ads.AdView>
+
+    <Button
+        android:id="@+id/buttonEquations"
+        style="@style/AppTheme2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/buttonsin"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/button"
+        android:text="Solve your trigonometric eqation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonhiperbolic" />
+</android.support.constraint.ConstraintLayout>
